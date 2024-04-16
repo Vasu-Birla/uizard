@@ -1,0 +1,85 @@
+/* ViewUsers.css */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(14, 241, 230);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Customize the appearance for the active and inactive states */
+.slider.active:before {
+  background-color: #2ecc71;
+  box-shadow: 0 0 10px #2ecc71;
+}
+
+.slider.inactive:before {
+  background-color: #e74c3c;
+  box-shadow: 0 0 10px #e74c3c;
+}
+
+
+
+/* Icon design  */ 
+
+/* Add more CSS as needed for specific styling and animations */
+
+.action-icon {
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.action-icon.delete {
+  color: #e74c3c;
+}
+
+.action-icon.edit {
+  color: #3498db;
+}
+
+.action-icon:hover {
+  color: #2ecc71;
+}
+

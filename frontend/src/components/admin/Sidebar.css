@@ -1,0 +1,24 @@
+.sidebar-content {
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+.sidebar-content h2 {
+  text-align: center;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-content li {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.sidebar-content a {
+  color: white;
+  text-decoration: none;
+}
