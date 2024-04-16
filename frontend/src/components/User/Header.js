@@ -6,11 +6,29 @@ import { Link , useNavigate } from 'react-router-dom';
 import './Header.css';
 
 const Header = ({ totalCartItems }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
 
   const navigate = useNavigate();
 
+
+
+  useEffect(() => {
+    // Check if user is logged in
+    const userToken = localStorage.getItem('User_token');
+    setIsLoggedIn(!!userToken); // Set isLoggedIn to true if userToken exists
+  }, []);
+
+
   const Logout = async () => {   
     localStorage.removeItem('User_token');
+    navigate('/login');
+  };
+
+
+  const handleLogout = () => {   
+    localStorage.removeItem('User_token');
+    setIsLoggedIn(false);
     navigate('/login');
   };
 
@@ -20,29 +38,18 @@ const Header = ({ totalCartItems }) => {
   return (
     <header className="user-header">
 
-      <div className="logo">
-        <Link to="/">Kilcart</Link>
+      <div className="logo1">
+        <Link to="/">STEMAZE consultency</Link>
       </div>
       <nav className="nav-menu">
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/products">Products</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-        </ul>
+        
       </nav>
-      <div className="user-actions">
-      <span>Welcome, User!</span>
-        {/* <Link to="/cart" className="cart-icon">
-          <img src="/images/trolley.png" alt="Cart" width="30" height="30" />
-          {totalCartItems > 0 && <span className="cart-badge">{totalCartItems}</span>}
-        </Link> */}
-
-<Link to="/cart" className="cart-icon">
-  <img src="/images/trolley.png" alt="Cart" width="30" height="30" />
-  {totalCartItems > 0 && <span className="cart-badge">{totalCartItems}</span>}
-</Link>
-
-        <button onClick={Logout} > Logout</button>
+      <div className="user-actions"> 
+      {isLoggedIn ? (
+          <button onClick={handleLogout}>Logout</button>
+        ) : (
+          <button onClick={() => navigate('/login')}>Login/Signup</button>
+        )}
       </div>
     </header>
   );

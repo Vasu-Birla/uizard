@@ -1,0 +1,70 @@
+/* Header.css */
+
+.user-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #050000;
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-menu li {
+  margin-right: 20px;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-actions span {
+  margin-right: -3px;
+}
+
+.cart-icon img {
+  margin-right: 10px;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: 0;
+  background-color: #1268a1; /* Customize the background color as needed */
+  color: white; /* Customize the text color as needed */
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold
+}
+

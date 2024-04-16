@@ -1,0 +1,61 @@
+.inventory-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column {
+    flex-basis: 50%;
+  }
+  
+  .image-preview {
+    box-sizing: border-box;
+    padding: 5px;
+    height: 200px; /* Set a fixed height for each image preview */
+    max-width: calc(50% - 10px); /* Ensure each image preview takes up 50% of the column width with spacing */
+    position: relative;
+  }
+  
+  .image-preview img {
+    width: 200%;
+    height: 100%; /* Ensure the image fills the entire container */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio and covers the container */
+  }
+  
+  .download-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+
+  .download-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-image: url('/public/images/download.png'); /* Replace 'download-icon.png' with your actual icon image */
+    background-size: cover;
+  }
+  
+  a.download-icon {
+    display: block;
+    text-indent: -9999px; /* Hide the anchor text */
+  }
+
+
+  
+.consult-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

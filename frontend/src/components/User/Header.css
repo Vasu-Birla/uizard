@@ -1,18 +1,19 @@
 /* Header.css */
 
 .user-header {
-  background-color: #3498db;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: #000000;
 }
 
-.logo a {
-  color: #fff;
+.logo1 a {
+  color: #000000;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: bold;
 }
 
@@ -38,6 +39,10 @@
 
 .user-actions span {
   margin-right: -3px;
+}
+
+.user-actions button {
+ background-color: #000000;
 }
 
 .cart-icon img {

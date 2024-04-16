@@ -10,27 +10,28 @@ import Register from './components/User/Register';
 import Cart from './components/User/Cart'
 import Checkout from './components/User/Checkout';
 import Payment from './components/User/Payment';
+import Inventory from './components/User/Inventory';
 
 
 
 function App() {
 
   const navigate = useNavigate();
-  const isUserAuthenticated = localStorage.getItem('User_token');
-  useEffect(() => {
-    if (!isUserAuthenticated && !window.location.pathname.startsWith('/admin')) {
-      navigate('/login'); // Redirect to login if not authenticated
-    }
-  }, [isUserAuthenticated, navigate]);
+  // const isUserAuthenticated = localStorage.getItem('User_token');
+  // useEffect(() => {
+  //   if (!isUserAuthenticated && !window.location.pathname.startsWith('/admin')) {
+  //     navigate('/login'); // Redirect to login if not authenticated
+  //   }
+  // }, [isUserAuthenticated, navigate]);
 
 
 
-  const isAdminAuthenticated = localStorage.getItem('Admin_token');
-  useEffect(() => {
-    if (!isAdminAuthenticated && window.location.pathname.startsWith('/admin')) {
-      navigate('/admin/login'); // Redirect to login if not authenticated
-    }
-  }, [isAdminAuthenticated, navigate]);
+  // const isAdminAuthenticated = localStorage.getItem('Admin_token');
+  // useEffect(() => {
+  //   if (!isAdminAuthenticated && window.location.pathname.startsWith('/admin')) {
+  //     navigate('/admin/login'); // Redirect to login if not authenticated
+  //   }
+  // }, [isAdminAuthenticated, navigate]);
 
 
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/products*" element={<Products />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/inventory" element={<Inventory />} />
                   
     </Routes>
     </div>

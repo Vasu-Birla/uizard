@@ -6,10 +6,12 @@
   justify-content: space-around;
 }
 
+
+
 .product-card {
   width: 300px;
-  margin: 20px;
-  padding: 10px;
+  margin: 17px;
+  padding: 13px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -38,12 +40,12 @@
 }
 
 .product-details p {
-  font-size: 0.9em;
+  font-size: 0.7em;
   margin-bottom: 10px;
 }
 
 .product-details button {
-  background-color: #3498db;
+  background-color: #000000;
   color: #fff;
   border: none;
   padding: 8px 15px;
@@ -59,4 +61,101 @@
 .product-details button.Added {
   background-color: #2ecc71; /* Green color for the added state */
   cursor: not-allowed;
+}
+
+
+
+
+
+
+.consult-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.consult-card {
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.consult-details {
+  margin-top: 10px;
+}
+
+.consult-details h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.consult-details p {
+  font-size: 0.7em;
+  margin-bottom: 10px;
+}
+
+
+
+.container {
+  display: flex;
+  padding: 100px 0px 0px 0px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  padding: 25px;
+  margin: 10px;
+}
+
+
+.column .p {
+  text-align: justify;
+  padding: 90px 0 0 0;
+}
+
+
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.testimonials-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  display: inline-block;
+  margin-left: 198px;
+}
+
+
+.basic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+.overlay-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgb(0, 0, 0); /* Semi-transparent white */
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay-button:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* More opaque white on hover */
 }
