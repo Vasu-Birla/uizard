@@ -5,7 +5,7 @@ const pool = mysql.createPool({
   user: 'root',
   password: '',
   port: '3306',
-  database: 'kilCart',
+  database: 'kilcart',
   waitForConnections: true, // Enable queueing
   connectionLimit: 100, // Set an appropriate limit
 });
